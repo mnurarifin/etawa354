@@ -1400,6 +1400,33 @@ footer {
   margin-right: 6px;
 }
 
+.wa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #25d366;
+  color: var(--white);
+  padding: 8px 16px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+}
+
+.wa-btn i {
+  font-size: 1.1rem;
+}
+
+.wa-btn:hover {
+  background-color: #128c7e;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+  color: var(--white);
+}
+
 /* Floating WhatsApp */
 .floating-wa {
   position: fixed;

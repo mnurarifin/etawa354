@@ -361,8 +361,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="network-role ${lowerRole}">${item.role}</div>
         <div class="network-contact" style="margin-top: 12px;">
           <strong>${item.name}</strong><br>
-          <a href="https://wa.me/${waNumber}" target="_blank" class="wa-link">
-            <i class="ph-fill ph-whatsapp-logo"></i> ${item.phone}
+          <div style="font-size: 0.95rem; margin: 6px 0 12px 0;">${item.phone}</div>
+          <a href="https://wa.me/${waNumber}" target="_blank" class="wa-btn">
+            <i class="ph-fill ph-whatsapp-logo"></i> Hubungi WhatsApp
           </a>
         </div>
       `;
