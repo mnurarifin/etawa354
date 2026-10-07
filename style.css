@@ -1128,44 +1128,118 @@ footer {
   }
 }
 
-/* Distribution Network Marquee */
+/* Distribution Network Map */
 .distribution-network {
   padding: 80px 0;
   background-color: var(--white);
   overflow: hidden;
 }
 
-.marquee-container {
-  width: 100vw;
+/* Interactive Map */
+.map-wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background: var(--bg-light);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
   position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
-  margin-right: -50vw;
+}
+
+#map-container svg {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Map Path Styling */
+#map-container svg path {
+  fill: #cbd5e1;
+  stroke: #ffffff;
+  stroke-width: 1;
+  transition: all 0.3s ease;
+}
+
+#map-container svg path.has-distributor {
+  fill: var(--primary-light);
+  cursor: pointer;
+}
+
+#map-container svg path.has-distributor:hover {
+  fill: var(--primary-dark);
+  transform: translateY(-2px);
+}
+
+/* Modal Styling */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.modal.show {
   display: flex;
-  overflow: hidden;
-  padding: 20px 0;
+  opacity: 1;
 }
 
-.marquee-track {
+.modal-content {
+  background-color: var(--white);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  width: 90%;
+  max-width: 500px;
+  max-height: 80vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: var(--shadow-xl);
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px;
+  right: 24px;
+  color: var(--text-muted);
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.modal-close:hover {
+  color: var(--primary);
+}
+
+.modal-title {
+  margin-bottom: 24px;
+  color: var(--primary);
+  border-bottom: 2px solid var(--bg-light);
+  padding-bottom: 12px;
+}
+
+.modal-list {
   display: flex;
-  gap: 24px;
-  animation: scrollMarquee 40s linear infinite;
-  width: max-content;
-  padding: 0 12px;
+  flex-direction: column;
+  gap: 16px;
 }
 
-.marquee-track:hover {
-  animation-play-state: paused;
-}
-
-@keyframes scrollMarquee {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(calc(-50% - 12px));
-  }
+.modal-list .network-card {
+  min-width: unset;
+  border-bottom-width: 3px;
+  padding: 16px;
 }
 
 .network-card {

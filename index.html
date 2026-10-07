@@ -416,12 +416,24 @@
           </p>
         </div>
       </div>
-      <div class="marquee-container fade-in-up delay-1">
-        <div class="marquee-track" id="network-track">
-          <!-- Injected via JS -->
+      <!-- Interactive Map Container -->
+      <div class="map-wrapper fade-in-up delay-1">
+        <div id="map-container">
+          <!-- SVG will be loaded here via JS -->
         </div>
       </div>
     </section>
+
+    <!-- Distributor Modal -->
+    <div id="distributorModal" class="modal">
+      <div class="modal-content">
+        <span class="modal-close">&times;</span>
+        <h3 id="modalProvinceTitle" class="modal-title">Daftar Mitra</h3>
+        <div id="modalDistributorList" class="modal-list">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+    </div>
 
     <!-- Testimoni Section -->
     <section class="testimonials" id="testimoni">
