@@ -358,20 +358,47 @@ p {
 
 .hero-image-container {
   position: relative;
-  padding-bottom: 20px;
+  min-height: 450px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .product-img {
-  width: 100%;
-  max-width: 500px;
+  position: absolute;
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-xl);
-  transform: perspective(1000px) rotateY(-5deg) rotateX(5deg);
   transition: var(--transition);
 }
 
-.product-img:hover {
-  transform: perspective(1000px) rotateY(0deg) rotateX(0deg);
+.img-back {
+  width: 70%;
+  max-width: 350px;
+  right: 5%;
+  top: 5%;
+  z-index: 1;
+  transform: perspective(1000px) rotateY(-15deg) rotateX(5deg) scale(0.9);
+  filter: brightness(0.9);
+}
+
+.img-front {
+  width: 75%;
+  max-width: 400px;
+  left: 5%;
+  bottom: 5%;
+  z-index: 2;
+  transform: perspective(1000px) rotateY(10deg) rotateX(5deg);
+}
+
+.img-front:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.05);
+  z-index: 3;
+}
+
+.img-back:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.05);
+  z-index: 3;
+  filter: brightness(1);
 }
 
 .floating-card {
