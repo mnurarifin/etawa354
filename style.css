@@ -449,24 +449,29 @@ p {
 }
 
 .feature-card {
-  background: var(--bg-light);
+  background: var(--white);
   padding: 40px;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 4px solid transparent;
+  box-shadow: var(--shadow-md);
   transition: var(--transition);
 }
 
 .feature-card:hover {
   transform: translateY(-10px);
-  box-shadow: var(--shadow-lg);
-  background: var(--white);
-  border-color: rgba(34, 197, 94, 0.2);
+  box-shadow: var(--shadow-xl);
+  border-top-color: var(--primary);
 }
 
 .icon-box {
   width: 64px;
   height: 64px;
-  background: rgba(34, 197, 94, 0.1);
+  background: linear-gradient(
+    135deg,
+    rgba(234, 88, 12, 0.1) 0%,
+    rgba(202, 138, 4, 0.1) 100%
+  );
   color: var(--primary);
   border-radius: 20px;
   display: flex;
@@ -478,8 +483,10 @@ p {
 }
 
 .feature-card:hover .icon-box {
-  background: var(--primary);
+  background: linear-gradient(135deg, var(--primary) 0%, var(--gold) 100%);
   color: var(--white);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 10px 20px rgba(234, 88, 12, 0.3);
 }
 
 .feature-card h4 {
