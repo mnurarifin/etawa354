@@ -272,25 +272,20 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalList = document.getElementById("modalDistributorList");
 
   if (mapContainer) {
-    // Load SVG Map
-    fetch("assets/indonesia-map.svg")
-      .then((response) => response.text())
-      .then((svgText) => {
-        mapContainer.innerHTML = svgText;
-        const paths = mapContainer.querySelectorAll("path");
+    // SVG Map is already embedded in HTML
+    const paths = mapContainer.querySelectorAll("path");
 
-        paths.forEach((path) => {
-          const provName = path.getAttribute("name");
-          if (provinceData[provName]) {
-            path.classList.add("has-distributor");
+    paths.forEach((path) => {
+      const provName = path.getAttribute("name");
+      if (provinceData[provName]) {
+        path.classList.add("has-distributor");
 
-            // Add click listener
-            path.addEventListener("click", () => {
-              openModal(provName, provinceData[provName]);
-            });
-          }
+        // Add click listener
+        path.addEventListener("click", () => {
+          openModal(provName, provinceData[provName]);
         });
-      });
+      }
+    });
   }
 
   function openModal(province, distributors) {
