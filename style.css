@@ -1319,3 +1319,20 @@ footer {
   color: var(--text-dark);
   font-size: 1rem;
 }
+
+/* Tooltip for map */
+.map-tooltip {
+  position: absolute;
+  background: var(--text-dark);
+  color: var(--white);
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  z-index: 1000;
+  white-space: nowrap;
+  box-shadow: var(--shadow-md);
+}

@@ -275,8 +275,31 @@ document.addEventListener("DOMContentLoaded", () => {
     // SVG Map is already embedded in HTML
     const paths = mapContainer.querySelectorAll("path");
 
+    // Map Tooltip Logic
+    const tooltip = document.createElement("div");
+    tooltip.className = "map-tooltip";
+    document.body.appendChild(tooltip);
+
     paths.forEach((path) => {
       const provName = path.getAttribute("name");
+
+      // Add hover tooltip for all provinces
+      if (provName) {
+        path.addEventListener("mouseenter", (e) => {
+          tooltip.textContent = provName;
+          tooltip.style.opacity = "1";
+        });
+
+        path.addEventListener("mousemove", (e) => {
+          tooltip.style.left = e.pageX + 15 + "px";
+          tooltip.style.top = e.pageY + 15 + "px";
+        });
+
+        path.addEventListener("mouseleave", () => {
+          tooltip.style.opacity = "0";
+        });
+      }
+
       if (provinceData[provName]) {
         path.classList.add("has-distributor");
 
