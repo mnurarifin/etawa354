@@ -1354,44 +1354,6 @@ footer {
   margin-right: 6px;
 }
 
-/* Trust Banner */
-.trust-banner {
-  background-color: var(--color-white);
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border-color);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
-}
-
-.trust-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
-.trust-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-.trust-item i {
-  font-size: 1.5rem;
-  color: var(--color-primary);
-}
-
-@media (max-width: 768px) {
-  .trust-container {
-    justify-content: flex-start;
-  }
-  .trust-item {
-    width: calc(50% - 1rem);
-  }
-}
-
 /* Floating WhatsApp */
 .floating-wa {
   position: fixed;
