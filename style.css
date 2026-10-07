@@ -634,40 +634,16 @@ p {
   font-size: 1.25rem;
 }
 
-/* BA Images (Used in Hero Section) */
-.ambassador-images {
-  position: relative;
-}
-
-.ambassador-image-container {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 450px;
-}
-
-.ba-img {
+/* Hero Single BA Image */
+.hero-single-ba {
+  width: 100%;
+  max-width: 420px;
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-lg);
-  object-fit: cover;
-}
-
-.main-ba {
-  width: 75%;
-  z-index: 2;
-  position: relative;
-  border: 8px solid var(--white);
-}
-
-.sub-ba {
-  width: 50%;
-  position: absolute;
-  right: 0;
-  bottom: -20px;
-  z-index: 3;
-  border: 6px solid var(--white);
   box-shadow: var(--shadow-xl);
+  border: 10px solid var(--white);
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Contact Section */
