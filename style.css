@@ -634,64 +634,7 @@ p {
   font-size: 1.25rem;
 }
 
-/* Ambassador Section */
-.ambassador-section {
-  padding: 100px 0;
-  background-color: var(--white);
-  overflow: hidden;
-}
-
-.ambassador-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
-
-.ambassador-content .description {
-  font-size: 1.25rem;
-  font-style: italic;
-  color: var(--text-dark);
-  line-height: 1.8;
-  margin: 32px 0;
-  position: relative;
-  z-index: 1;
-}
-
-.ambassador-content .description::before {
-  content: '"';
-  position: absolute;
-  top: -40px;
-  left: -20px;
-  font-size: 6rem;
-  color: rgba(225, 172, 36, 0.15);
-  font-family: serif;
-  z-index: -1;
-}
-
-.ambassador-features {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.a-feat {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-weight: 600;
-  color: var(--text-dark);
-  background: var(--light-bg);
-  padding: 10px 20px;
-  border-radius: 50px;
-  font-size: 0.9rem;
-}
-
-.a-feat i {
-  color: var(--primary);
-  font-size: 1.2rem;
-}
-
+/* BA Images (Used in Hero Section) */
 .ambassador-images {
   position: relative;
 }
@@ -725,20 +668,6 @@ p {
   z-index: 3;
   border: 6px solid var(--white);
   box-shadow: var(--shadow-xl);
-}
-
-@media (max-width: 992px) {
-  .ambassador-grid {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
-  .ambassador-content .description::before {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  .ambassador-features {
-    justify-content: center;
-  }
 }
 
 /* Contact Section */
