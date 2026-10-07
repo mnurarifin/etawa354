@@ -283,10 +283,15 @@ document.addEventListener("DOMContentLoaded", () => {
     paths.forEach((path) => {
       const provName = path.getAttribute("name");
 
+      // Override nama SVG agar lebih familiar
+      let displayName = provName;
+      if (provName === "Jakarta Raya") displayName = "DKI Jakarta";
+      if (provName === "Yogyakarta") displayName = "DI Yogyakarta";
+
       // Add hover tooltip for all provinces
       if (provName) {
         path.addEventListener("mouseenter", (e) => {
-          tooltip.textContent = provName;
+          tooltip.textContent = displayName;
           tooltip.style.opacity = "1";
         });
 
@@ -305,7 +310,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         // Add click listener
         path.addEventListener("click", () => {
-          openModal(provName, provinceData[provName]);
+          openModal(displayName, provinceData[provName]);
         });
       }
     });
