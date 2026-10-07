@@ -38,9 +38,24 @@ document.addEventListener("DOMContentLoaded", () => {
   if (leadForm) {
     leadForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      alert(
-        "Terima kasih! Tim kami akan segera menghubungi WhatsApp Anda untuk proses selanjutnya.",
-      );
+
+      const inputs = leadForm.querySelectorAll("input");
+      const nama = inputs[0].value;
+      const wa = inputs[1].value;
+      const kota = inputs[2].value;
+      const jenis = leadForm.querySelector("select").value;
+
+      // Nomor Admin (Pastikan format 62...)
+      const adminWhatsApp = "6281234567890";
+
+      const message = `Halo Admin ETAWA 354,%0A%0ASaya tertarik untuk bergabung/memesan produk.%0A%0A*Nama:* ${nama}%0A*No. WA:* ${wa}%0A*Asal Kota/Negara:* ${kota}%0A*Jenis Pesanan:* ${jenis}%0A%0AMohon panduan selanjutnya. Terima kasih.`;
+
+      const waUrl = `https://api.whatsapp.com/send?phone=${adminWhatsApp}&text=${message}`;
+
+      // Buka WA di tab baru
+      window.open(waUrl, "_blank");
+
+      // Kosongkan form setelah dikirim
       leadForm.reset();
     });
   }
