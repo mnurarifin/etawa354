@@ -48,7 +48,18 @@ document.addEventListener("DOMContentLoaded", () => {
       // Nomor Admin (Pastikan format 62...)
       const adminWhatsApp = "6281234567890";
 
-      const message = `Halo Admin ETAWA 354,%0A%0ASaya tertarik untuk bergabung/memesan produk.%0A%0A*Nama:* ${nama}%0A*No. WA:* ${wa}%0A*Asal Kota/Negara:* ${kota}%0A*Jenis Pesanan:* ${jenis}%0A%0AMohon panduan selanjutnya. Terima kasih.`;
+      let actionText = "bergabung menjadi mitra";
+      if (jenis === "Eceran") {
+        actionText = "memesan produk ETAWA 354";
+      } else if (
+        jenis === "Reseller" ||
+        jenis === "Agen" ||
+        jenis === "Distributor"
+      ) {
+        actionText = `mendaftar sebagai ${jenis}`;
+      }
+
+      const message = `Halo Admin ETAWA 354,%0A%0ASaya tertarik untuk ${actionText}.%0A%0A*Nama:* ${nama}%0A*No. WA:* ${wa}%0A*Asal Kota/Negara:* ${kota}%0A*Jenis Pesanan:* ${jenis}%0A%0AMohon panduan selanjutnya. Terima kasih.`;
 
       const waUrl = `https://api.whatsapp.com/send?phone=${adminWhatsApp}&text=${message}`;
 
