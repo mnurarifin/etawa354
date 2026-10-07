@@ -1336,3 +1336,20 @@ footer {
   white-space: nowrap;
   box-shadow: var(--shadow-md);
 }
+
+.wa-link {
+  text-decoration: none;
+  color: var(--text-muted);
+  display: inline-flex;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.wa-link:hover {
+  color: #128c7e;
+}
+
+.wa-link i {
+  color: #25d366;
+  margin-right: 6px;
+}

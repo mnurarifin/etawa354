@@ -322,6 +322,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     distributors.forEach((item) => {
       const lowerRole = item.role.toLowerCase();
+
+      let waNumber = item.phone.replace(/\D/g, "");
+      if (waNumber.startsWith("0")) {
+        waNumber = "62" + waNumber.substring(1);
+      }
+
       const card = document.createElement("div");
       card.className = `network-card ${lowerRole}`;
       card.innerHTML = `
@@ -329,7 +335,9 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="network-role ${lowerRole}">${item.role}</div>
         <div class="network-contact" style="margin-top: 12px;">
           <strong>${item.name}</strong><br>
-          <i class="ph-fill ph-whatsapp-logo" style="color:#25D366; margin-right:4px;"></i>${item.phone}
+          <a href="https://wa.me/${waNumber}" target="_blank" class="wa-link">
+            <i class="ph-fill ph-whatsapp-logo"></i> ${item.phone}
+          </a>
         </div>
       `;
       modalList.appendChild(card);
