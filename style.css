@@ -1127,3 +1127,121 @@ footer {
     gap: 40px;
   }
 }
+
+/* Distribution Network Marquee */
+.distribution-network {
+  padding: 80px 0;
+  background-color: var(--white);
+  overflow: hidden;
+}
+
+.marquee-container {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  display: flex;
+  overflow: hidden;
+  padding: 20px 0;
+}
+
+.marquee-track {
+  display: flex;
+  gap: 24px;
+  animation: scrollMarquee 40s linear infinite;
+  width: max-content;
+  padding: 0 12px;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-50% - 12px));
+  }
+}
+
+.network-card {
+  min-width: 280px;
+  background: var(--bg-light);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+  border-bottom: 4px solid var(--primary);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: var(--transition);
+}
+
+.network-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+}
+
+.network-card.distributor {
+  border-bottom-color: var(--gold);
+  background: rgba(250, 204, 21, 0.05);
+}
+
+.network-card.agen {
+  border-bottom-color: var(--primary);
+}
+
+.network-card.reseller {
+  border-bottom-color: #9f1239;
+}
+
+.network-city {
+  font-weight: 700;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.1rem;
+}
+
+.network-city i {
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+.network-role {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  width: fit-content;
+}
+
+.network-role.distributor {
+  background: rgba(250, 204, 21, 0.2);
+  color: var(--gold);
+}
+.network-role.agen {
+  background: rgba(234, 88, 12, 0.1);
+  color: var(--primary);
+}
+.network-role.reseller {
+  background: rgba(159, 18, 57, 0.1);
+  color: #9f1239;
+}
+
+.network-contact {
+  margin-top: auto;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+.network-contact strong {
+  color: var(--text-dark);
+  font-size: 1rem;
+}
