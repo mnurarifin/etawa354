@@ -60,7 +60,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <!-- Phosphor Icons (Modern Icons) -->
-    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script defer src="https://unpkg.com/@phosphor-icons/web"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -131,6 +131,7 @@
             src="assets/brand-ambassador-main.png"
             alt="Brand Ambassador ETAWA 354"
             class="hero-single-ba"
+            fetchpriority="high"
           />
         </div>
       </div>
@@ -206,6 +207,7 @@
               <img
                 src="assets/etawa-original-transparent.png"
                 alt="ETAWA 354 dengan Kurma"
+                loading="lazy"
               />
               <div class="product-badge">Best Seller</div>
             </div>
@@ -240,6 +242,7 @@
               <img
                 src="assets/etawa-plus-transparent.png"
                 alt="ETAWA 354 Plus Skin Nutrition"
+                loading="lazy"
               />
               <div class="product-badge new">New Variant</div>
             </div>
