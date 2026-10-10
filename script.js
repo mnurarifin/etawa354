@@ -234,6 +234,44 @@ document.addEventListener("DOMContentLoaded", () => {
         name: "H. Dariman",
         phone: "0823-7703-1512",
       },
+      {
+        city: "Jambi",
+        role: "Agen",
+        name: "H. Rosi",
+        phone: "082211080350",
+      },
+      {
+        city: "Jambi",
+        role: "Reseller",
+        name: "Ihwan",
+        phone: "081299295016",
+      },
+      {
+        city: "Jambi",
+        role: "Reseller",
+        name: "Muhaimin",
+        phone: "082319171142",
+      },
+      {
+        city: "Jambi",
+        role: "Reseller",
+        name: "Indah",
+        phone: "082239778009",
+      },
+      {
+        city: "Jambi",
+        role: "Reseller",
+        name: "H. Munir",
+        phone: "082214208685",
+      },
+    ],
+    Aceh: [
+      {
+        city: "Aceh",
+        role: "Reseller",
+        name: "Dedi",
+        phone: "082261059622",
+      },
     ],
     "Kalimantan Barat": [
       {
