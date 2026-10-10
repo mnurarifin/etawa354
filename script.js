@@ -147,12 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
       {
         city: "Bandung",
         role: "Reseller",
-        name: "Adini",
-        phone: "0857-9411-1416",
-      },
-      {
-        city: "Bandung",
-        role: "Reseller",
         name: "M. Ali",
         phone: "0812-9695-4620",
       },
@@ -168,20 +162,69 @@ document.addEventListener("DOMContentLoaded", () => {
         name: "Widodo",
         phone: "0813-1896-3983",
       },
-      { city: "Cimahi", role: "Agen", name: "Nia", phone: "0813-2120-5964" },
       {
         city: "Cimahi",
-        role: "Reseller",
-        name: "Annisa",
-        phone: "0821-2650-1303",
+        role: "Agen",
+        name: "Nia",
+        phone: "0813-2120-5964",
       },
     ],
-    "Jakarta Raya": [
+    Riau: [
       {
-        city: "Jakarta Utara",
+        city: "Dumai",
         role: "Reseller",
-        name: "Asep",
-        phone: "0857-2303-4624",
+        name: "Warsito",
+        phone: "0812-7600-7000",
+      },
+      {
+        city: "Riau",
+        role: "Distributor",
+        name: "Ahmad",
+        phone: "0822-8744-4313",
+      },
+    ],
+    "Jawa Tengah": [
+      {
+        city: "Grobogan",
+        role: "Reseller",
+        name: "Suyatman",
+        phone: "0896-9774-4774",
+      },
+      {
+        city: "Klaten",
+        role: "Reseller",
+        name: "Samijo",
+        phone: "-",
+      },
+      {
+        city: "Magelang",
+        role: "Reseller",
+        name: "Ibu Ega",
+        phone: "0857-7977-2400",
+      },
+      {
+        city: "Pemalang",
+        role: "Reseller",
+        name: "Siti",
+        phone: "0853-1150-2523",
+      },
+      {
+        city: "Purwokerto",
+        role: "Reseller",
+        name: "H. Jazair",
+        phone: "0821-8779-8254",
+      },
+      {
+        city: "Sragen",
+        role: "Distributor",
+        name: "Iwan",
+        phone: "0881-3910-153",
+      },
+      {
+        city: "Sukoharjo",
+        role: "Reseller",
+        name: "Sutarno Ar",
+        phone: "0852-9098-8354",
       },
     ],
     Jambi: [
@@ -192,52 +235,12 @@ document.addEventListener("DOMContentLoaded", () => {
         phone: "0823-7703-1512",
       },
     ],
-    "Jawa Timur": [
-      {
-        city: "Jombang",
-        role: "Reseller",
-        name: "Joko",
-        phone: "0822-3347-7641",
-      },
-      {
-        city: "Surabaya",
-        role: "Reseller",
-        name: "Latif",
-        phone: "0823-3312-5504",
-      },
-    ],
     "Kalimantan Barat": [
       {
-        city: "Ketapang, Kalbar",
+        city: "Ketapang, Kalimantan Barat",
         role: "Distributor",
         name: "Pardi",
         phone: "0813-5269-4151",
-      },
-    ],
-    "Jawa Tengah": [
-      {
-        city: "Klaten",
-        role: "Reseller",
-        name: "H. Biky",
-        phone: "0821-3689-6430",
-      },
-      {
-        city: "Magelang",
-        role: "Reseller",
-        name: "Ibu Ega",
-        phone: "0857-7977-2400",
-      },
-      {
-        city: "Solo",
-        role: "Distributor",
-        name: "H. Heri",
-        phone: "0821-3623-4268",
-      },
-      {
-        city: "Sukoharjo",
-        role: "Reseller",
-        name: "Sutarno Ar",
-        phone: "0852-9098-8354",
       },
     ],
     "Sulawesi Selatan": [
@@ -249,7 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
       },
       {
         city: "Makassar",
-        role: "Reseller",
+        role: "Agen",
         name: "Mujayanah",
         phone: "0852-9990-8556",
       },
@@ -262,16 +265,41 @@ document.addEventListener("DOMContentLoaded", () => {
         phone: "0813-8300-354",
       },
     ],
+    "Sulawesi Tengah": [
+      {
+        city: "Palu",
+        role: "Reseller",
+        name: "Rina",
+        phone: "0813-4103-7043",
+      },
+    ],
     "Sulawesi Barat": [
       {
-        city: "Polman, Sulbar",
+        city: "Polman (Sulawesi Barat)",
         role: "Reseller",
         name: "Rahmat",
         phone: "0823-4957-1354",
       },
     ],
-    Riau: [
-      { city: "Riau", role: "Agen", name: "Ahmad", phone: "0822-8744-4313" },
+    "Jawa Timur": [
+      {
+        city: "Surabaya",
+        role: "Distributor",
+        name: "Devi",
+        phone: "0822-2995-0131",
+      },
+      {
+        city: "Surabaya",
+        role: "Reseller",
+        name: "Hendri",
+        phone: "0851-7744-7166",
+      },
+      {
+        city: "Surabaya",
+        role: "Reseller",
+        name: "Latif",
+        phone: "0823-3312-5504",
+      },
     ],
     Banten: [
       {
@@ -279,6 +307,12 @@ document.addEventListener("DOMContentLoaded", () => {
         role: "Reseller",
         name: "Anshori",
         phone: "0813-9254-3428",
+      },
+      {
+        city: "Tangerang",
+        role: "Reseller",
+        name: "Sulastri",
+        phone: "0813-1120-5336",
       },
     ],
     Yogyakarta: [
