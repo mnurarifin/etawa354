@@ -380,7 +380,19 @@ document.addEventListener("DOMContentLoaded", () => {
     modalTitle.textContent = `Mitra di ${province}`;
     modalList.innerHTML = "";
 
-    distributors.forEach((item) => {
+    const roleOrder = {
+      Distributor: 1,
+      Agen: 2,
+      Reseller: 3,
+    };
+
+    const sortedDistributors = [...distributors].sort((a, b) => {
+      const orderA = roleOrder[a.role] || 99;
+      const orderB = roleOrder[b.role] || 99;
+      return orderA - orderB;
+    });
+
+    sortedDistributors.forEach((item) => {
       const lowerRole = item.role.toLowerCase();
 
       let waNumber = item.phone.replace(/\D/g, "");
